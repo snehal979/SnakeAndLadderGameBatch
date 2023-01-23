@@ -10,7 +10,7 @@ namespace SnakeAndLadderGame
     {
         int Player_Position = 0;
         const int No_Play = 0, Ladder = 1, Snake = 2;
-        int winning_Position = 100;
+        int winning_Position =100;
         Random random = new Random();
         public void Starting_PositionOfPlayer()
         { 
@@ -46,9 +46,11 @@ namespace SnakeAndLadderGame
                     case Ladder:
                         Player_Position += DiceRoll();
                         type ="Ladder";
-                        if (Player_Position > 100) // not greater than 100 
+                        //Uc 5 When player position goes to greater than 100 then its automatically break the program 
+                        if (Player_Position > winning_Position) // not greater than 100 
                         {
                             Console.WriteLine("Get Second Chance to Win");
+                            Player_Position -= DiceRoll();
                             break;
                         }
                         break;
