@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
+using System.Numerics;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,9 +10,11 @@ namespace SnakeAndLadderGame
 {
     internal class GamePlay
     {
+        //Variable
         int Player_Position = 0;
         const int No_Play = 0, Ladder = 1, Snake = 2;
         int winning_Position =100;
+        int Dice_Played_Count = 0;
         Random random = new Random();
         public void Starting_PositionOfPlayer()
         { 
@@ -26,6 +30,7 @@ namespace SnakeAndLadderGame
             //The Player rolls the die to get a number between 1 to 6. - Use((RANDOM)) to get the number 
             int diceRoll = random.Next(1,7);
             Console.WriteLine("The player get number {0} on DiceRoll",diceRoll);
+            Dice_Played_Count++;
             return diceRoll;
         }
         /// <summary>
@@ -72,8 +77,12 @@ namespace SnakeAndLadderGame
                 Console.WriteLine("---------");
             }     
             Console.WriteLine("Game over ! Player is at winning position {0} ", Player_Position);
-           
+
+            //Uc 6 Report the number of times the dice was played to win the game and also the position after every die role
+            Console.WriteLine("Dice played Count for win the Game " + Dice_Played_Count);
+
         }
+
         
     }
 }
