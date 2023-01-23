@@ -8,6 +8,7 @@
             //Uc1 Starting position at zero
             GamePlay gamePlay = new GamePlay();
             gamePlay.Starting_PositionOfPlayer();
+            gamePlay.DiceRoll();
             Console.ReadLine();
         }
     }

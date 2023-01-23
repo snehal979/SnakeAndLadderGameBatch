@@ -15,5 +15,15 @@ namespace SnakeAndLadderGame
             Console.WriteLine("Let start the game");
             Console.WriteLine("The Player is starting position "+Player_Position);
         }
+        /// <summary>
+        /// Uc2 DiceRoll
+        /// </summary>
+        public void DiceRoll()
+        {
+            //The Player rolls the die to get a number between 1 to 6. - Use((RANDOM)) to get the number
+            Random random = new Random();
+            int diceRoll = random.Next(1,7);
+            Console.WriteLine("The player get number {0} on DiceRoll",diceRoll);
+        }
     }
 }
