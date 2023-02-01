@@ -13,7 +13,7 @@ namespace SnakeAndLadderGame
         //Variable
         int Player_1_Position = 0, Player_2_Position = 0; // Vaiable for two player
         const int No_Play = 0, Ladder = 1, Snake = 2;
-        int winning_Position =10;
+        int winning_Position =100;
         int Dice_Played_Count = 0;
       
         Random random = new Random();
